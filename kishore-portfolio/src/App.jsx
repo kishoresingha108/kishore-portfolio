@@ -1,5 +1,6 @@
 
 import './App.css';
+import profilePhoto from './assets/kishore-profile.png'; 
 
 function App() {
   const projects = [
@@ -79,22 +80,19 @@ function App() {
           </div>
 
           <div className="hero-visual">
-            <div className="visual-card">
-              <div className="visual-top">
-                <span>DEVELOPER PROFILE</span>
-                <span>✳</span>
-              </div>
-              <div className="visual-symbol">&lt;/&gt;</div>
-              <h2>Code. Create. Innovate.</h2>
-              <p>Turning ideas into functional digital experiences.</p>
-              <div className="visual-bottom">
-                <span>FULL STACK DEVELOPMENT</span>
-                <span>2026 — PRESENT</span>
-              </div>
-            </div>
-            <div className="floating-tag">React.js ✳</div>
-            <div className="floating-tag tag-two">JavaScript ↗</div>
-          </div>
+  <div className="profile-image-wrapper">
+    <img
+      src={profilePhoto}
+      alt="Kishore Singh A. - Full Stack Developer"
+      className="profile-image"
+    />
+
+    <div className="profile-caption">
+      <span className="status-dot"></span>
+      Aspiring Full Stack Developer
+    </div>
+  </div>
+</div>
         </section>
 
         <section className="about section" id="about">

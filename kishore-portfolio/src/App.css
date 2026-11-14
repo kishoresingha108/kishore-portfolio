@@ -480,3 +480,281 @@ footer > a:last-child {
   color: #6b55e8;
   transform: translateY(-2px);
 }
+/* ===== PROJECT SHOWCASE ===== */
+
+.projects-intro {
+  max-width: 650px;
+  color: #777;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-top: -20px;
+  margin-bottom: 40px;
+}
+
+.project-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.showcase-card {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 35px;
+  padding: 24px;
+  border: 1px solid #e7e7e2;
+  background: #fff;
+  border-radius: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showcase-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 45px rgba(45, 35, 80, 0.08);
+}
+
+.showcase-visual {
+  min-height: 340px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #e9e6f9;
+}
+
+.showcase-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  object-fit: cover;
+}
+
+.showcase-placeholder {
+  height: 100%;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  padding: 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #e9e6f9, #f4f1ff);
+}
+
+.showcase-placeholder-number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 85px;
+  font-weight: 700;
+  color: #c6bdf6;
+}
+
+.showcase-placeholder-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  color: #5143a8;
+}
+
+.showcase-placeholder-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #8177ae;
+}
+
+.showcase-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px 5px;
+  min-width: 0;
+}
+
+.showcase-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: #8b80c2;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.showcase-content h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(23px, 2.5vw, 32px);
+  line-height: 1.2;
+  margin: 20px 0;
+}
+
+.showcase-description {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.showcase-features {
+  margin-top: 25px;
+}
+
+.showcase-features p {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.showcase-features ul {
+  padding-left: 18px;
+  color: #666;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.showcase-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.showcase-link {
+  display: inline-block;
+  padding: 12px 18px;
+  background: #191919;
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.showcase-link:hover {
+  background: #6b55e8;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE PROJECT CARDS */
+
+@media (max-width: 900px) {
+  .showcase-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .showcase-visual,
+  .showcase-placeholder,
+  .showcase-image {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .showcase-card {
+    padding: 14px;
+  }
+
+  .showcase-content {
+    padding: 10px 4px;
+  }
+
+  .showcase-placeholder-number {
+    font-size: 60px;
+  }
+
+  .showcase-content h3 {
+    font-size: 24px;
+  }
+}
+
+/* Fix banking project screenshot */
+
+.showcase-visual {
+  height: 340px;
+  min-height: 0;
+  background: #080f1a;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.showcase-card:hover .showcase-image {
+  transform: none;
+}
+
+@media (max-width: 480px) {
+  .showcase-visual {
+    height: 230px;
+  }
+}
+
+/* Banking screenshot gallery */
+
+.banking-gallery {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  background: #080f1a;
+}
+
+.banking-gallery-image {
+  width: 100%;
+  height: calc(100% - 52px);
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+.banking-gallery-controls {
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 12px;
+  background: #111b2a;
+  color: white;
+}
+
+.banking-gallery-controls span {
+  font-size: 12px;
+  text-align: center;
+}
+
+.banking-gallery-controls button {
+  width: 36px;
+  height: 34px;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  background: #1e293b;
+  color: white;
+  font-size: 19px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.banking-gallery-controls button:hover {
+  background: #6b55e8;
+  border-color: #6b55e8;
+}
+
+@media (max-width: 480px) {
+  .banking-gallery-controls span {
+    font-size: 11px;
+  }
+}

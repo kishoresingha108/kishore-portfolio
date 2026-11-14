@@ -71,7 +71,32 @@ function App() {
               <a href="#contact" className="secondary-btn">
                 Get In Touch
               </a>
+
+              <a
+  href="/Kishore_Singh_Resume.pdf"
+  download="Kishore_Singh_Resume.pdf"
+  className="btn btn-outline"
+>
+  Download Resume ↓
+</a>
             </div>
+            <div className="social-links">
+  <a
+    href="https://github.com/kishoresingha108"
+    target="_blank"
+    rel="noreferrer"
+  >
+    GitHub ↗
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/kishore-singh-a-b34319395"
+    target="_blank"
+    rel="noreferrer"
+  >
+    LinkedIn ↗
+  </a>
+</div>
 
             <div className="hero-meta">
               <span>BASED IN INDIA</span>

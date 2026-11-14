@@ -463,3 +463,20 @@ footer > a:last-child {
     height: 380px;
   }
 }
+.social-links {
+  display: flex;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.social-links a {
+  color: #555;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #6b55e8;
+  transform: translateY(-2px);
+}

@@ -443,22 +443,51 @@ screenshots: [
 </section>
 
 
-        <section className="contact section reveal" id="contact">
-          <p className="section-label">04 / GET IN TOUCH</p>
-          <h2>Have an idea?<br /><span>Let's build it.</span></h2>
-          <p>
-            I'm interested in development opportunities, collaborations
-            and exciting projects. Feel free to reach out.
-          </p>
-          <a
-            href="https://github.com/kishoresingha108"
-            target="_blank"
-            rel="noreferrer"
-            className="primary-btn"
-          >
-            Visit My GitHub ↗
-          </a>
-        </section>
+        <section className="contact section" id="contact">
+  <p className="section-label">04 / GET IN TOUCH</p>
+
+  <div className="contact-status">
+    <span className="status-dot"></span>
+    AVAILABLE FOR FREELANCE PROJECTS
+  </div>
+
+  <h2>
+    Have a project in mind?
+    <br />
+    <span>Let's build something great.</span>
+  </h2>
+
+  <p className="contact-description">
+    I'm open to freelance website development, frontend projects,
+    internships, and collaborations. Whether you need a landing page,
+    portfolio website, or a modern web application, I'd love to hear
+    about your idea.
+  </p>
+
+  <div className="contact-actions">
+    <a
+      href="https://www.linkedin.com/in/kishore-singh-a-b34319395"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="primary-btn"
+    >
+      Hire Me / Let's Connect ↗
+    </a>
+
+    <a
+      href="https://github.com/kishoresingha108"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="secondary-btn"
+    >
+      View GitHub ↗
+    </a>
+  </div>
+
+  <p className="contact-note">
+    Open to remote opportunities and freelance collaborations.
+  </p>
+</section>
       </main>
 
       <footer>

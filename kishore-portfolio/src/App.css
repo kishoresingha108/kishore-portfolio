@@ -758,3 +758,13 @@ footer > a:last-child {
     font-size: 11px;
   }
 }
+/* Fix Projects heading visibility */
+.projects h2 {
+  color: #191919;
+  opacity: 1;
+}
+
+.projects h2 span {
+  color: #2563eb;
+  opacity: 1;
+}

@@ -68,7 +68,7 @@ const previousBankingImage = () => {
       'Account and transaction management',
     ],
     screenshot: bankingDashboard,
-    github: null,
+    github: 'https://github.com/kishoresingha108/neobank-india',
     demo: null,
   },
   {

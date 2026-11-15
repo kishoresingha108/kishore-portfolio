@@ -1,9 +1,8 @@
-
 import './App.css';
 import profilePhoto from './assets/kishore-profile.png'; 
 import bankingDashboard from './assets/banking-dashboard.png';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import evaluatorHome from './assets/evaluator-home.jpeg';
 import evaluatorLogin from './assets/evaluator-login.jpeg';
@@ -28,6 +27,25 @@ import bankingSuccess from './assets/banking-success.png';
 
 
 function App() {
+  useEffect(() => {
+    document.documentElement.classList.add('js-motion');
+    const items = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      items.forEach((item) => item.classList.add('is-visible'));
+      return;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -35px 0px' });
+    items.forEach((item) => observer.observe(item));
+    return () => { observer.disconnect(); document.documentElement.classList.remove('js-motion'); };
+  }, []);
+
 
 const bankingImages = [
   { src: bankingDashboard, label: 'Dashboard' },
@@ -115,7 +133,7 @@ screenshots: [
 
   return (
     <div className="portfolio">
-      <nav className="navbar">
+      <nav className="navbar" aria-label="Main navigation">
         <a href="#home" className="logo">KS<span>.</span></a>
         <div className="nav-links">
           <a href="#about">About</a>
@@ -127,7 +145,7 @@ screenshots: [
 
       <main>
         <section className="hero" id="home">
-          <div className="hero-content">
+          <div className="hero-content reveal">
             <div className="availability">
               <span className="status-dot"></span>
               OPEN TO OPPORTUNITIES
@@ -160,7 +178,7 @@ screenshots: [
               <a
   href="/Kishore_Singh_Resume.pdf"
   download="Kishore_Singh_Resume.pdf"
-  className="btn btn-outline"
+  className="resume-btn"
 >
   Download Resume ↓
 </a>
@@ -189,7 +207,7 @@ screenshots: [
             </div>
           </div>
 
-          <div className="hero-visual">
+          <div className="hero-visual reveal">
   <div className="profile-image-wrapper">
     <img
       src={profilePhoto}
@@ -207,7 +225,7 @@ screenshots: [
 
         <section className="about section" id="about">
           <p className="section-label">01 / ABOUT ME</p>
-          <div className="about-content">
+          <div className="about-content reveal">
             <h2>
               Curious by nature.
               <br />
@@ -226,7 +244,7 @@ screenshots: [
         <section className="skills section" id="skills">
           <p className="section-label">02 / MY TOOLKIT</p>
           <h2>Technologies I work with<span>.</span></h2>
-          <div className="skills-grid">
+          <div className="skills-grid reveal">
             {skills.map((skill) => (
               <div className="skill-item" key={skill}>{skill} ↗</div>
             ))}
@@ -248,7 +266,7 @@ screenshots: [
 
   <div className="project-showcase">
     {projects.map((project) => (
-      <article className="showcase-card" key={project.number}>
+      <article className="showcase-card reveal" key={project.number}>
 
         
 <div className="showcase-visual">
@@ -425,7 +443,7 @@ screenshots: [
 </section>
 
 
-        <section className="contact section" id="contact">
+        <section className="contact section reveal" id="contact">
           <p className="section-label">04 / GET IN TOUCH</p>
           <h2>Have an idea?<br /><span>Let's build it.</span></h2>
           <p>
@@ -433,7 +451,7 @@ screenshots: [
             and exciting projects. Feel free to reach out.
           </p>
           <a
-            href="https://github.com/kishoresingh108"
+            href="https://github.com/kishoresingha108"
             target="_blank"
             rel="noreferrer"
             className="primary-btn"

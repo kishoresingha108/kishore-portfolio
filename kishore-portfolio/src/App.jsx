@@ -102,7 +102,7 @@ screenshots: [
   evaluatorDatabase,
 ],
 
-    github: null,
+    github: 'https://github.com/kishoresingha108/ai-answer-script-evaluator',
     demo: null,
   },
 ];

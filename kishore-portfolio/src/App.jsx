@@ -482,6 +482,12 @@ screenshots: [
     >
       View GitHub ↗
     </a>
+    <a
+  href="mailto:kishore.singh.a2005@gmail.com?subject=Freelance%20Project%20Inquiry"
+  className="secondary-btn"
+>
+  ✉ Send Email
+</a>
   </div>
 
   <p className="contact-note">
